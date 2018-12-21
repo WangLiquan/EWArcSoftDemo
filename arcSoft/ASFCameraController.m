@@ -46,11 +46,7 @@
     
     AVCaptureVideoDataOutput *videoOut = [[AVCaptureVideoDataOutput alloc] init];
     [videoOut setAlwaysDiscardsLateVideoFrames:YES];
-    //    /// 设定视频预览层,也就是相机预览layer
-    //    let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
 
-    //    /// 相机页面展现形式
-    //    previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill /// 拉伸充满frame
     _previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:captureSession];
     _previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
 
