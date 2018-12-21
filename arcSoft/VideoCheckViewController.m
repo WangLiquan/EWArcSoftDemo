@@ -133,12 +133,21 @@
 
                                 [UIView animateWithDuration:1.3 animations:^{
                                     self->showImageView.transform =CGAffineTransformMakeScale(0.7, 0.7);
-
                                 } completion:^(BOOL finished) {
                                     RippleAnimationView *viewA = [[RippleAnimationView alloc] initWithFrame:CGRectMake(0, 0, self->showImageView.frame.size.width, self->showImageView.frame.size.height) animationType:AnimationTypeWithBackground];
                                     viewA.center = self->showImageView.center;
                                     [self->imageBackView addSubview:viewA];
                                     [self->imageBackView bringSubviewToFront:self->showImageView];
+                                    ImageShowViewController *vc = [[ImageShowViewController alloc] init];
+                                    vc.image = resultImage;
+                                    double delayInSeconds = 2.0;
+                                    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+                                    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+
+                                        [weakself presentViewController:vc animated:false completion:nil];
+                                    });
+
+
                                 }];
                             }
                         }

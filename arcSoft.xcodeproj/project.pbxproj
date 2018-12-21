@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		790092E621CA206000276552 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7901446E21C8C0B400B8B06C /* libstdc++.6.0.9.tbd */; };
-		790092E821CA207100276552 /* ArcSoftFaceEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790092E721CA207100276552 /* ArcSoftFaceEngine.framework */; };
 		7900933B21CA241000276552 /* VideoCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7900933A21CA241000276552 /* VideoCheckViewController.m */; };
 		7900933E21CA263900276552 /* ASFCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7900933C21CA263900276552 /* ASFCameraController.m */; };
 		7900934321CA2D3E00276552 /* ASFVideoProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7900934121CA2D3E00276552 /* ASFVideoProcessor.mm */; };
@@ -28,6 +27,7 @@
 		7901445E21C8C08600B8B06C /* arcSoftUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901445D21C8C08600B8B06C /* arcSoftUITests.m */; };
 		79D19B2F21CB762300782144 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D19B2E21CB762300782144 /* CoreMotion.framework */; };
 		79D19B3221CB9E4B00782144 /* RippleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D19B3121CB9E4B00782144 /* RippleAnimationView.m */; };
+		79EA256B21CC86DB001FE1CB /* ArcSoftFaceEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790092E721CA207100276552 /* ArcSoftFaceEngine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,9 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79EA256B21CC86DB001FE1CB /* ArcSoftFaceEngine.framework in Frameworks */,
 				79D19B2F21CB762300782144 /* CoreMotion.framework in Frameworks */,
 				790092E621CA206000276552 /* libstdc++.6.0.9.tbd in Frameworks */,
-				790092E821CA207100276552 /* ArcSoftFaceEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,35 +142,17 @@
 		7901443821C8C08400B8B06C /* arcSoft */ = {
 			isa = PBXGroup;
 			children = (
-				790092E721CA207100276552 /* ArcSoftFaceEngine.framework */,
-				790093C121CA349C00276552 /* FSDKFR.xcdatamodeld */,
-				790093AD21CA2E5D00276552 /* ASFRCDManager.h */,
-				790093AC21CA2E5D00276552 /* ASFRCDManager.m */,
-				790093A421CA2E3100276552 /* ASFRPerson.h */,
-				790093A321CA2E3100276552 /* ASFRPerson.m */,
-				790093A121CA2E2300276552 /* ASFRManager.h */,
-				790093A021CA2E2300276552 /* ASFRManager.m */,
-				7901443921C8C08400B8B06C /* AppDelegate.h */,
-				7901443A21C8C08400B8B06C /* AppDelegate.m */,
+				79EA256821CC859F001FE1CB /* ArcSoftFaceEngine */,
+				79EA256921CC85FE001FE1CB /* RippleAnimation */,
 				7901443C21C8C08400B8B06C /* ViewController.h */,
 				7901443D21C8C08400B8B06C /* ViewController.mm */,
 				7900933D21CA263900276552 /* ASFCameraController.h */,
 				7900933C21CA263900276552 /* ASFCameraController.m */,
-				7900934021CA2D3E00276552 /* ASFVideoProcessor.h */,
-				7900934121CA2D3E00276552 /* ASFVideoProcessor.mm */,
-				7900933F21CA2D3E00276552 /* Utility.h */,
-				7900934221CA2D3E00276552 /* Utility.m */,
-				79D19B3021CB9E4B00782144 /* RippleAnimationView.h */,
-				79D19B3121CB9E4B00782144 /* RippleAnimationView.m */,
 				7900933921CA241000276552 /* VideoCheckViewController.h */,
 				7900933A21CA241000276552 /* VideoCheckViewController.m */,
 				790093DD21CA515900276552 /* ImageShowViewController.h */,
 				790093DC21CA515900276552 /* ImageShowViewController.m */,
-				7901443F21C8C08400B8B06C /* Main.storyboard */,
-				7901444221C8C08600B8B06C /* Assets.xcassets */,
-				7901444421C8C08600B8B06C /* LaunchScreen.storyboard */,
-				7901444721C8C08600B8B06C /* Info.plist */,
-				7901444821C8C08600B8B06C /* main.m */,
+				79EA256A21CC8658001FE1CB /* Other */,
 			);
 			path = arcSoft;
 			sourceTree = "<group>";
@@ -202,6 +184,48 @@
 				7901446C21C8C09300B8B06C /* ArcSoftFaceEngine.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79EA256821CC859F001FE1CB /* ArcSoftFaceEngine */ = {
+			isa = PBXGroup;
+			children = (
+				7900934021CA2D3E00276552 /* ASFVideoProcessor.h */,
+				7900934121CA2D3E00276552 /* ASFVideoProcessor.mm */,
+				7900933F21CA2D3E00276552 /* Utility.h */,
+				7900934221CA2D3E00276552 /* Utility.m */,
+				790092E721CA207100276552 /* ArcSoftFaceEngine.framework */,
+				790093C121CA349C00276552 /* FSDKFR.xcdatamodeld */,
+				790093A021CA2E2300276552 /* ASFRManager.m */,
+				790093AD21CA2E5D00276552 /* ASFRCDManager.h */,
+				790093AC21CA2E5D00276552 /* ASFRCDManager.m */,
+				790093A421CA2E3100276552 /* ASFRPerson.h */,
+				790093A321CA2E3100276552 /* ASFRPerson.m */,
+				790093A121CA2E2300276552 /* ASFRManager.h */,
+			);
+			path = ArcSoftFaceEngine;
+			sourceTree = "<group>";
+		};
+		79EA256921CC85FE001FE1CB /* RippleAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				79D19B3021CB9E4B00782144 /* RippleAnimationView.h */,
+				79D19B3121CB9E4B00782144 /* RippleAnimationView.m */,
+			);
+			path = RippleAnimation;
+			sourceTree = "<group>";
+		};
+		79EA256A21CC8658001FE1CB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7901443F21C8C08400B8B06C /* Main.storyboard */,
+				7901443921C8C08400B8B06C /* AppDelegate.h */,
+				7901443A21C8C08400B8B06C /* AppDelegate.m */,
+				7901444221C8C08600B8B06C /* Assets.xcassets */,
+				7901444421C8C08600B8B06C /* LaunchScreen.storyboard */,
+				7901444721C8C08600B8B06C /* Info.plist */,
+				7901444821C8C08600B8B06C /* main.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,9 +547,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/arcSoft",
+					"$(PROJECT_DIR)/arcSoft/ArcSoftFaceEngine",
 				);
 				GCC_NO_COMMON_BLOCKS = NO;
-				INFOPLIST_FILE = arcSoft/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/arcSoft/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,9 +572,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/arcSoft",
+					"$(PROJECT_DIR)/arcSoft/ArcSoftFaceEngine",
 				);
 				GCC_NO_COMMON_BLOCKS = NO;
-				INFOPLIST_FILE = arcSoft/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/arcSoft/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
