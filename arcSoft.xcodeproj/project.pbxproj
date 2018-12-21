@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		790092E621CA206000276552 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7901446E21C8C0B400B8B06C /* libstdc++.6.0.9.tbd */; };
+		790092E821CA207100276552 /* ArcSoftFaceEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790092E721CA207100276552 /* ArcSoftFaceEngine.framework */; };
+		7900933B21CA241000276552 /* VideoCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7900933A21CA241000276552 /* VideoCheckViewController.m */; };
+		7900933E21CA263900276552 /* ASFCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7900933C21CA263900276552 /* ASFCameraController.m */; };
+		7900934321CA2D3E00276552 /* ASFVideoProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7900934121CA2D3E00276552 /* ASFVideoProcessor.mm */; };
+		7900934421CA2D3E00276552 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7900934221CA2D3E00276552 /* Utility.m */; };
+		790093A221CA2E2300276552 /* ASFRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 790093A021CA2E2300276552 /* ASFRManager.m */; };
+		790093A521CA2E3100276552 /* ASFRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 790093A321CA2E3100276552 /* ASFRPerson.m */; };
+		790093AE21CA2E5D00276552 /* ASFRCDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 790093AC21CA2E5D00276552 /* ASFRCDManager.m */; };
+		790093C321CA349C00276552 /* FSDKFR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 790093C121CA349C00276552 /* FSDKFR.xcdatamodeld */; };
+		790093DE21CA515900276552 /* ImageShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790093DC21CA515900276552 /* ImageShowViewController.m */; };
+		7901443B21C8C08400B8B06C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901443A21C8C08400B8B06C /* AppDelegate.m */; };
+		7901443E21C8C08400B8B06C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7901443D21C8C08400B8B06C /* ViewController.mm */; };
+		7901444121C8C08400B8B06C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7901443F21C8C08400B8B06C /* Main.storyboard */; };
+		7901444321C8C08600B8B06C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7901444221C8C08600B8B06C /* Assets.xcassets */; };
+		7901444621C8C08600B8B06C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7901444421C8C08600B8B06C /* LaunchScreen.storyboard */; };
+		7901444921C8C08600B8B06C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901444821C8C08600B8B06C /* main.m */; };
+		7901445321C8C08600B8B06C /* arcSoftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901445221C8C08600B8B06C /* arcSoftTests.m */; };
+		7901445E21C8C08600B8B06C /* arcSoftUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901445D21C8C08600B8B06C /* arcSoftUITests.m */; };
+		79D19B2F21CB762300782144 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D19B2E21CB762300782144 /* CoreMotion.framework */; };
+		79D19B3221CB9E4B00782144 /* RippleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D19B3121CB9E4B00782144 /* RippleAnimationView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7901444F21C8C08600B8B06C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7901442E21C8C08400B8B06C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7901443521C8C08400B8B06C;
+			remoteInfo = arcSoft;
+		};
+		7901445A21C8C08600B8B06C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7901442E21C8C08400B8B06C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7901443521C8C08400B8B06C;
+			remoteInfo = arcSoft;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		790092E421CA204D00276552 /* ArcSoftFaceEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcSoftFaceEngine.framework; path = "../../Downloads/ArcSoft_ArcFace_iOS_V2.0 (1)/libs/ArcSoftFaceEngine.framework"; sourceTree = "<group>"; };
+		790092E721CA207100276552 /* ArcSoftFaceEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ArcSoftFaceEngine.framework; sourceTree = "<group>"; };
+		7900933921CA241000276552 /* VideoCheckViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCheckViewController.h; sourceTree = "<group>"; };
+		7900933A21CA241000276552 /* VideoCheckViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCheckViewController.m; sourceTree = "<group>"; };
+		7900933C21CA263900276552 /* ASFCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFCameraController.m; sourceTree = "<group>"; };
+		7900933D21CA263900276552 /* ASFCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFCameraController.h; sourceTree = "<group>"; };
+		7900933F21CA2D3E00276552 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		7900934021CA2D3E00276552 /* ASFVideoProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFVideoProcessor.h; sourceTree = "<group>"; };
+		7900934121CA2D3E00276552 /* ASFVideoProcessor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASFVideoProcessor.mm; sourceTree = "<group>"; };
+		7900934221CA2D3E00276552 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		790093A021CA2E2300276552 /* ASFRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFRManager.m; sourceTree = "<group>"; };
+		790093A121CA2E2300276552 /* ASFRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFRManager.h; sourceTree = "<group>"; };
+		790093A321CA2E3100276552 /* ASFRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFRPerson.m; sourceTree = "<group>"; };
+		790093A421CA2E3100276552 /* ASFRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFRPerson.h; sourceTree = "<group>"; };
+		790093AC21CA2E5D00276552 /* ASFRCDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFRCDManager.m; sourceTree = "<group>"; };
+		790093AD21CA2E5D00276552 /* ASFRCDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFRCDManager.h; sourceTree = "<group>"; };
+		790093C221CA349C00276552 /* FSDKFR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FSDKFR.xcdatamodel; sourceTree = "<group>"; };
+		790093DC21CA515900276552 /* ImageShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageShowViewController.m; sourceTree = "<group>"; };
+		790093DD21CA515900276552 /* ImageShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageShowViewController.h; sourceTree = "<group>"; };
+		7901443621C8C08400B8B06C /* arcSoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arcSoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7901443921C8C08400B8B06C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7901443A21C8C08400B8B06C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7901443C21C8C08400B8B06C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7901443D21C8C08400B8B06C /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		7901444021C8C08400B8B06C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7901444221C8C08600B8B06C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7901444521C8C08600B8B06C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7901444721C8C08600B8B06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7901444821C8C08600B8B06C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7901444E21C8C08600B8B06C /* arcSoftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arcSoftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7901445221C8C08600B8B06C /* arcSoftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arcSoftTests.m; sourceTree = "<group>"; };
+		7901445421C8C08600B8B06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7901445921C8C08600B8B06C /* arcSoftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arcSoftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7901445D21C8C08600B8B06C /* arcSoftUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arcSoftUITests.m; sourceTree = "<group>"; };
+		7901445F21C8C08600B8B06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7901446C21C8C09300B8B06C /* ArcSoftFaceEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcSoftFaceEngine.framework; path = ../../Downloads/ArcSoft_ArcFace_iOS_V2.0/libs/ArcSoftFaceEngine.framework; sourceTree = "<group>"; };
+		7901446E21C8C0B400B8B06C /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		79D19B2E21CB762300782144 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		79D19B3021CB9E4B00782144 /* RippleAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RippleAnimationView.h; sourceTree = "<group>"; };
+		79D19B3121CB9E4B00782144 /* RippleAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RippleAnimationView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7901443321C8C08400B8B06C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D19B2F21CB762300782144 /* CoreMotion.framework in Frameworks */,
+				790092E621CA206000276552 /* libstdc++.6.0.9.tbd in Frameworks */,
+				790092E821CA207100276552 /* ArcSoftFaceEngine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7901444B21C8C08600B8B06C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7901445621C8C08600B8B06C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7901442D21C8C08400B8B06C = {
+			isa = PBXGroup;
+			children = (
+				7901443821C8C08400B8B06C /* arcSoft */,
+				7901445121C8C08600B8B06C /* arcSoftTests */,
+				7901445C21C8C08600B8B06C /* arcSoftUITests */,
+				7901443721C8C08400B8B06C /* Products */,
+				7901446B21C8C09300B8B06C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7901443721C8C08400B8B06C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7901443621C8C08400B8B06C /* arcSoft.app */,
+				7901444E21C8C08600B8B06C /* arcSoftTests.xctest */,
+				7901445921C8C08600B8B06C /* arcSoftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7901443821C8C08400B8B06C /* arcSoft */ = {
+			isa = PBXGroup;
+			children = (
+				790092E721CA207100276552 /* ArcSoftFaceEngine.framework */,
+				790093C121CA349C00276552 /* FSDKFR.xcdatamodeld */,
+				790093AD21CA2E5D00276552 /* ASFRCDManager.h */,
+				790093AC21CA2E5D00276552 /* ASFRCDManager.m */,
+				790093A421CA2E3100276552 /* ASFRPerson.h */,
+				790093A321CA2E3100276552 /* ASFRPerson.m */,
+				790093A121CA2E2300276552 /* ASFRManager.h */,
+				790093A021CA2E2300276552 /* ASFRManager.m */,
+				7901443921C8C08400B8B06C /* AppDelegate.h */,
+				7901443A21C8C08400B8B06C /* AppDelegate.m */,
+				7901443C21C8C08400B8B06C /* ViewController.h */,
+				7901443D21C8C08400B8B06C /* ViewController.mm */,
+				7900933D21CA263900276552 /* ASFCameraController.h */,
+				7900933C21CA263900276552 /* ASFCameraController.m */,
+				7900934021CA2D3E00276552 /* ASFVideoProcessor.h */,
+				7900934121CA2D3E00276552 /* ASFVideoProcessor.mm */,
+				7900933F21CA2D3E00276552 /* Utility.h */,
+				7900934221CA2D3E00276552 /* Utility.m */,
+				79D19B3021CB9E4B00782144 /* RippleAnimationView.h */,
+				79D19B3121CB9E4B00782144 /* RippleAnimationView.m */,
+				7900933921CA241000276552 /* VideoCheckViewController.h */,
+				7900933A21CA241000276552 /* VideoCheckViewController.m */,
+				790093DD21CA515900276552 /* ImageShowViewController.h */,
+				790093DC21CA515900276552 /* ImageShowViewController.m */,
+				7901443F21C8C08400B8B06C /* Main.storyboard */,
+				7901444221C8C08600B8B06C /* Assets.xcassets */,
+				7901444421C8C08600B8B06C /* LaunchScreen.storyboard */,
+				7901444721C8C08600B8B06C /* Info.plist */,
+				7901444821C8C08600B8B06C /* main.m */,
+			);
+			path = arcSoft;
+			sourceTree = "<group>";
+		};
+		7901445121C8C08600B8B06C /* arcSoftTests */ = {
+			isa = PBXGroup;
+			children = (
+				7901445221C8C08600B8B06C /* arcSoftTests.m */,
+				7901445421C8C08600B8B06C /* Info.plist */,
+			);
+			path = arcSoftTests;
+			sourceTree = "<group>";
+		};
+		7901445C21C8C08600B8B06C /* arcSoftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7901445D21C8C08600B8B06C /* arcSoftUITests.m */,
+				7901445F21C8C08600B8B06C /* Info.plist */,
+			);
+			path = arcSoftUITests;
+			sourceTree = "<group>";
+		};
+		7901446B21C8C09300B8B06C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79D19B2E21CB762300782144 /* CoreMotion.framework */,
+				790092E421CA204D00276552 /* ArcSoftFaceEngine.framework */,
+				7901446E21C8C0B400B8B06C /* libstdc++.6.0.9.tbd */,
+				7901446C21C8C09300B8B06C /* ArcSoftFaceEngine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7901443521C8C08400B8B06C /* arcSoft */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7901446221C8C08600B8B06C /* Build configuration list for PBXNativeTarget "arcSoft" */;
+			buildPhases = (
+				7901443221C8C08400B8B06C /* Sources */,
+				7901443321C8C08400B8B06C /* Frameworks */,
+				7901443421C8C08400B8B06C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = arcSoft;
+			productName = arcSoft;
+			productReference = 7901443621C8C08400B8B06C /* arcSoft.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7901444D21C8C08600B8B06C /* arcSoftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7901446521C8C08600B8B06C /* Build configuration list for PBXNativeTarget "arcSoftTests" */;
+			buildPhases = (
+				7901444A21C8C08600B8B06C /* Sources */,
+				7901444B21C8C08600B8B06C /* Frameworks */,
+				7901444C21C8C08600B8B06C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7901445021C8C08600B8B06C /* PBXTargetDependency */,
+			);
+			name = arcSoftTests;
+			productName = arcSoftTests;
+			productReference = 7901444E21C8C08600B8B06C /* arcSoftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7901445821C8C08600B8B06C /* arcSoftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7901446821C8C08600B8B06C /* Build configuration list for PBXNativeTarget "arcSoftUITests" */;
+			buildPhases = (
+				7901445521C8C08600B8B06C /* Sources */,
+				7901445621C8C08600B8B06C /* Frameworks */,
+				7901445721C8C08600B8B06C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7901445B21C8C08600B8B06C /* PBXTargetDependency */,
+			);
+			name = arcSoftUITests;
+			productName = arcSoftUITests;
+			productReference = 7901445921C8C08600B8B06C /* arcSoftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7901442E21C8C08400B8B06C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Ethan;
+				TargetAttributes = {
+					7901443521C8C08400B8B06C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7901444D21C8C08600B8B06C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 7901443521C8C08400B8B06C;
+					};
+					7901445821C8C08600B8B06C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 7901443521C8C08400B8B06C;
+					};
+				};
+			};
+			buildConfigurationList = 7901443121C8C08400B8B06C /* Build configuration list for PBXProject "arcSoft" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7901442D21C8C08400B8B06C;
+			productRefGroup = 7901443721C8C08400B8B06C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7901443521C8C08400B8B06C /* arcSoft */,
+				7901444D21C8C08600B8B06C /* arcSoftTests */,
+				7901445821C8C08600B8B06C /* arcSoftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7901443421C8C08400B8B06C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7901444621C8C08600B8B06C /* LaunchScreen.storyboard in Resources */,
+				7901444321C8C08600B8B06C /* Assets.xcassets in Resources */,
+				7901444121C8C08400B8B06C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7901444C21C8C08600B8B06C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7901445721C8C08600B8B06C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7901443221C8C08400B8B06C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7900933E21CA263900276552 /* ASFCameraController.m in Sources */,
+				790093A521CA2E3100276552 /* ASFRPerson.m in Sources */,
+				79D19B3221CB9E4B00782144 /* RippleAnimationView.m in Sources */,
+				7901443E21C8C08400B8B06C /* ViewController.mm in Sources */,
+				790093DE21CA515900276552 /* ImageShowViewController.m in Sources */,
+				790093AE21CA2E5D00276552 /* ASFRCDManager.m in Sources */,
+				790093C321CA349C00276552 /* FSDKFR.xcdatamodeld in Sources */,
+				7900933B21CA241000276552 /* VideoCheckViewController.m in Sources */,
+				7900934321CA2D3E00276552 /* ASFVideoProcessor.mm in Sources */,
+				7900934421CA2D3E00276552 /* Utility.m in Sources */,
+				7901444921C8C08600B8B06C /* main.m in Sources */,
+				7901443B21C8C08400B8B06C /* AppDelegate.m in Sources */,
+				790093A221CA2E2300276552 /* ASFRManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7901444A21C8C08600B8B06C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7901445321C8C08600B8B06C /* arcSoftTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7901445521C8C08600B8B06C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7901445E21C8C08600B8B06C /* arcSoftUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7901445021C8C08600B8B06C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7901443521C8C08400B8B06C /* arcSoft */;
+			targetProxy = 7901444F21C8C08600B8B06C /* PBXContainerItemProxy */;
+		};
+		7901445B21C8C08600B8B06C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7901443521C8C08400B8B06C /* arcSoft */;
+			targetProxy = 7901445A21C8C08600B8B06C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7901443F21C8C08400B8B06C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7901444021C8C08400B8B06C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7901444421C8C08600B8B06C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7901444521C8C08600B8B06C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7901446021C8C08600B8B06C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7901446121C8C08600B8B06C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7901446321C8C08600B8B06C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/arcSoft",
+				);
+				GCC_NO_COMMON_BLOCKS = NO;
+				INFOPLIST_FILE = arcSoft/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.arcSoft;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7901446421C8C08600B8B06C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/arcSoft",
+				);
+				GCC_NO_COMMON_BLOCKS = NO;
+				INFOPLIST_FILE = arcSoft/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.arcSoft;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7901446621C8C08600B8B06C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				INFOPLIST_FILE = arcSoftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.arcSoftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/arcSoft.app/arcSoft";
+			};
+			name = Debug;
+		};
+		7901446721C8C08600B8B06C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				INFOPLIST_FILE = arcSoftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.arcSoftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/arcSoft.app/arcSoft";
+			};
+			name = Release;
+		};
+		7901446921C8C08600B8B06C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				INFOPLIST_FILE = arcSoftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.arcSoftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = arcSoft;
+			};
+			name = Debug;
+		};
+		7901446A21C8C08600B8B06C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8V4DCL3BF;
+				INFOPLIST_FILE = arcSoftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.arcSoftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = arcSoft;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7901443121C8C08400B8B06C /* Build configuration list for PBXProject "arcSoft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7901446021C8C08600B8B06C /* Debug */,
+				7901446121C8C08600B8B06C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7901446221C8C08600B8B06C /* Build configuration list for PBXNativeTarget "arcSoft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7901446321C8C08600B8B06C /* Debug */,
+				7901446421C8C08600B8B06C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7901446521C8C08600B8B06C /* Build configuration list for PBXNativeTarget "arcSoftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7901446621C8C08600B8B06C /* Debug */,
+				7901446721C8C08600B8B06C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7901446821C8C08600B8B06C /* Build configuration list for PBXNativeTarget "arcSoftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7901446921C8C08600B8B06C /* Debug */,
+				7901446A21C8C08600B8B06C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		790093C121CA349C00276552 /* FSDKFR.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				790093C221CA349C00276552 /* FSDKFR.xcdatamodel */,
+			);
+			currentVersion = 790093C221CA349C00276552 /* FSDKFR.xcdatamodel */;
+			path = FSDKFR.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7901442E21C8C08400B8B06C /* Project object */;
+}
