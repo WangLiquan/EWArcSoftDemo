@@ -38,6 +38,7 @@
 }
 
 -(void)engineActive:(UIButton*)sender {
+    /// 虹软官网注册的appid
     NSString *appid = @"827JymBcUZD7E5GKisw4jVGL3JvEWAjcJyHkhGzR7iH4";
     NSString *sdkkey = @"CSHHVMxni2LNY9VP8tq9UF2japndSZcXvFjxAStdrV9B";
     ArcSoftFaceEngine *engine = [[ArcSoftFaceEngine alloc] init];
