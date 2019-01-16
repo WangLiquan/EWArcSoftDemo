@@ -39,8 +39,8 @@
 
 -(void)engineActive:(UIButton*)sender {
     /// 虹软官网注册的appid
-    NSString *appid = @"827JymBcUZD7E5GKisw4jVGL3JvEWAjcJyHkhGzR7iH4";
-    NSString *sdkkey = @"CSHHVMxni2LNY9VP8tq9UF2japndSZcXvFjxAStdrV9B";
+    NSString *appid = @"";
+    NSString *sdkkey = @"";
     ArcSoftFaceEngine *engine = [[ArcSoftFaceEngine alloc] init];
     MRESULT mr = [engine activeWithAppId:appid SDKKey:sdkkey];
     if (mr == ASF_MOK) {

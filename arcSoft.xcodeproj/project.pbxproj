@@ -26,7 +26,6 @@
 		7901445321C8C08600B8B06C /* arcSoftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901445221C8C08600B8B06C /* arcSoftTests.m */; };
 		7901445E21C8C08600B8B06C /* arcSoftUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7901445D21C8C08600B8B06C /* arcSoftUITests.m */; };
 		79D19B2F21CB762300782144 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D19B2E21CB762300782144 /* CoreMotion.framework */; };
-		79D19B3221CB9E4B00782144 /* RippleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D19B3121CB9E4B00782144 /* RippleAnimationView.m */; };
 		79EA256B21CC86DB001FE1CB /* ArcSoftFaceEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790092E721CA207100276552 /* ArcSoftFaceEngine.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,8 +85,6 @@
 		7901446C21C8C09300B8B06C /* ArcSoftFaceEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcSoftFaceEngine.framework; path = ../../Downloads/ArcSoft_ArcFace_iOS_V2.0/libs/ArcSoftFaceEngine.framework; sourceTree = "<group>"; };
 		7901446E21C8C0B400B8B06C /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		79D19B2E21CB762300782144 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		79D19B3021CB9E4B00782144 /* RippleAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RippleAnimationView.h; sourceTree = "<group>"; };
-		79D19B3121CB9E4B00782144 /* RippleAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RippleAnimationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				79EA256821CC859F001FE1CB /* ArcSoftFaceEngine */,
-				79EA256921CC85FE001FE1CB /* RippleAnimation */,
 				7901443C21C8C08400B8B06C /* ViewController.h */,
 				7901443D21C8C08400B8B06C /* ViewController.mm */,
 				7900933D21CA263900276552 /* ASFCameraController.h */,
@@ -203,15 +199,6 @@
 				790093A121CA2E2300276552 /* ASFRManager.h */,
 			);
 			path = ArcSoftFaceEngine;
-			sourceTree = "<group>";
-		};
-		79EA256921CC85FE001FE1CB /* RippleAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				79D19B3021CB9E4B00782144 /* RippleAnimationView.h */,
-				79D19B3121CB9E4B00782144 /* RippleAnimationView.m */,
-			);
-			path = RippleAnimation;
 			sourceTree = "<group>";
 		};
 		79EA256A21CC8658001FE1CB /* Other */ = {
@@ -360,7 +347,6 @@
 			files = (
 				7900933E21CA263900276552 /* ASFCameraController.m in Sources */,
 				790093A521CA2E3100276552 /* ASFRPerson.m in Sources */,
-				79D19B3221CB9E4B00782144 /* RippleAnimationView.m in Sources */,
 				7901443E21C8C08400B8B06C /* ViewController.mm in Sources */,
 				790093DE21CA515900276552 /* ImageShowViewController.m in Sources */,
 				790093AE21CA2E5D00276552 /* ASFRCDManager.m in Sources */,

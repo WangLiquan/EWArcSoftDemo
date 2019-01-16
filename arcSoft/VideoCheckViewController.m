@@ -12,7 +12,6 @@
 #import "ASFVideoProcessor.h"
 #import "ImageShowViewController.h"
 #import <ArcSoftFaceEngine/ArcSoftFaceEngine.h>
-#import "RippleAnimationView.h"
 
 #define IMAGE_WIDTH     720
 #define IMAGE_HEIGHT    1280
@@ -75,11 +74,7 @@
     showImageView.layer.masksToBounds = YES;
     showImageView.contentMode = UIViewContentModeCenter;
     [imageBackView addSubview:showImageView];
-    /// 预览相片旁边的波纹动画
-    RippleAnimationView *viewA = [[RippleAnimationView alloc] initWithFrame:CGRectMake(0, 0, showImageView.frame.size.width, showImageView.frame.size.height) animationType:AnimationTypeWithBackground];
-    viewA.center = showImageView.center;
-    [imageBackView addSubview:viewA];
-    [imageBackView bringSubviewToFront:showImageView];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -137,9 +132,11 @@
                     if (faceInfo.face3DAngle.rollAngle <= 10 && faceInfo.face3DAngle.rollAngle >= -10 && faceInfo.face3DAngle.yawAngle <= 10 && faceInfo.face3DAngle.yawAngle >= -10 && faceInfo.face3DAngle.pitchAngle <= 10 && faceInfo.face3DAngle.pitchAngle >= -10){
                         /// 判断人脸View.frame,保证人脸在扫描框中
                         if (CGRectContainsRect(CGRectMake(30, 150, (UIScreen.mainScreen.bounds.size.width - 60), (UIScreen.mainScreen.bounds.size.height - 300)), faceRectView.frame)){
+                            self->scanningImageView.image = [UIImage imageNamed:@"scanning_pink"];
+
                             /// 判断陀螺仪实时片钻加速度,保证手机在尽量平稳的状态
                             CMGyroData *newestAccel = self.motionManager.gyroData;
-                            if (newestAccel.rotationRate.x < 0.00005 && newestAccel.rotationRate.y < 0.00005 && newestAccel.rotationRate.z < 0.00005 ){
+                            if (newestAccel.rotationRate.x < 0.000005 && newestAccel.rotationRate.y < 0.000005 && newestAccel.rotationRate.z < 0.000005 ){
                                 /// 全部条件满足,则拍照.
                                 self->takePhoto = false;
                                 /// 将数据转换成UIImage
@@ -167,6 +164,8 @@
 
                                 }];
                             }
+                        }else {
+                            self->scanningImageView.image = [UIImage imageNamed:@"scanning"];
                         }
                     }
                 }
@@ -174,7 +173,7 @@
         });
         /// 释放内存!!! 重要!!!
         [Utility freeCameraData:cameraData];
-        }
+    }
 }
 
 /**
