@@ -75,11 +75,11 @@
     showImageView.layer.masksToBounds = YES;
     showImageView.contentMode = UIViewContentModeCenter;
     [imageBackView addSubview:showImageView];
-
-    RippleAnimationView *viewA = [[RippleAnimationView alloc] initWithFrame:CGRectMake(0, 0, self->showImageView.frame.size.width, self->showImageView.frame.size.height) animationType:AnimationTypeWithBackground];
-    viewA.center = self->showImageView.center;
-    [self->imageBackView addSubview:viewA];
-    [self->imageBackView bringSubviewToFront:self->showImageView];
+    /// 预览相片旁边的波纹动画
+    RippleAnimationView *viewA = [[RippleAnimationView alloc] initWithFrame:CGRectMake(0, 0, showImageView.frame.size.width, showImageView.frame.size.height) animationType:AnimationTypeWithBackground];
+    viewA.center = showImageView.center;
+    [imageBackView addSubview:viewA];
+    [imageBackView bringSubviewToFront:showImageView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,23 +88,31 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    /// 开始前摄像头画面捕捉
     [self.cameraController startCaptureSession];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    /// 停止前摄像头画面捕捉
     [self.cameraController stopCaptureSession];
 }
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
+    /// 在获取相片状态下
     if (takePhoto == true){
-
+        /// 获取数据传入虹软人面识别控制器
         CVImageBufferRef cameraFrame = CMSampleBufferGetImageBuffer(sampleBuffer);
         ASF_CAMERA_DATA* cameraData = [Utility  getCameraDataFromSampleBuffer:sampleBuffer];
+        /// 获取画面中人脸信息
         NSArray *arrayFaceInfo = [self.videoProcessor process:cameraData];
+
         __weak __typeof__(self) weakself = self;
+        /// 主线程进行页面操作
         dispatch_sync(dispatch_get_main_queue(), ^{
+            /// 获取人脸view数组是为了判断rect
             if(weakself.arrayAllFaceRectView.count >= arrayFaceInfo.count)
             {
+                /// 如果画面中人脸数量高于储存人脸View数量,则从数组中获取.
                 for (NSUInteger face=arrayFaceInfo.count; face<weakself.arrayAllFaceRectView.count; face++) {
                     UIView *faceRectView = [weakself.arrayAllFaceRectView objectAtIndex:face];
                     faceRectView.hidden = YES;
@@ -112,39 +120,41 @@
             }
             else
             {
+                /// 否则新建view加入数组
                 for (NSUInteger face=weakself.arrayAllFaceRectView.count; face<arrayFaceInfo.count; face++) {
                     UIView *view = [[UIView alloc] init];
                     [weakself.view addSubview:view];
                     [weakself.arrayAllFaceRectView addObject:view];
                 }
             }
-                        for (NSUInteger face = 0; face < arrayFaceInfo.count; face++) {
+            for (NSUInteger face = 0; face < arrayFaceInfo.count; face++) {
                 UIView *faceRectView = [weakself.arrayAllFaceRectView objectAtIndex:face];
                 ASFVideoFaceInfo *faceInfo = [arrayFaceInfo objectAtIndex:face];
                 faceRectView.hidden = NO;
                 faceRectView.frame = [weakself dataFaceRect2ViewFaceRect:faceInfo.faceRect];
-
+                //// 判断face3DAngle,保证人脸正对摄像头
                 if(faceInfo.face3DAngle.status == 0) {
                     if (faceInfo.face3DAngle.rollAngle <= 10 && faceInfo.face3DAngle.rollAngle >= -10 && faceInfo.face3DAngle.yawAngle <= 10 && faceInfo.face3DAngle.yawAngle >= -10 && faceInfo.face3DAngle.pitchAngle <= 10 && faceInfo.face3DAngle.pitchAngle >= -10){
+                        /// 判断人脸View.frame,保证人脸在扫描框中
                         if (CGRectContainsRect(CGRectMake(30, 150, (UIScreen.mainScreen.bounds.size.width - 60), (UIScreen.mainScreen.bounds.size.height - 300)), faceRectView.frame)){
+                            /// 判断陀螺仪实时片钻加速度,保证手机在尽量平稳的状态
                             CMGyroData *newestAccel = self.motionManager.gyroData;
-                            if (newestAccel.rotationRate.x < 0.0005 && newestAccel.rotationRate.y < 0.0005 && newestAccel.rotationRate.z < 0.0005 ){
+                            if (newestAccel.rotationRate.x < 0.00005 && newestAccel.rotationRate.y < 0.00005 && newestAccel.rotationRate.z < 0.00005 ){
+                                /// 全部条件满足,则拍照.
                                 self->takePhoto = false;
+                                /// 将数据转换成UIImage
                                 CIImage *ciImage = [[CIImage alloc] initWithCVPixelBuffer: cameraFrame];
                                 CIContext *context = [[CIContext alloc] init];
                                 CGRect imageRect= CGRectMake(0, 0, CVPixelBufferGetWidth(cameraFrame), CVPixelBufferGetHeight(cameraFrame));
-
                                 struct CGImage *image = [context createCGImage:ciImage fromRect:imageRect];
                                 UIImage *resultImage = [[UIImage alloc] initWithCGImage:image scale:UIScreen.mainScreen.scale orientation:UIImageOrientationUp];
-
+                                /// 将预览View展示,把结果image加入预览ImageView
                                 self->imageBackView.hidden = NO;
-
                                 self->showImageView.image = resultImage;
-
+                                /// 添加一个缩小动画,并在动画结束后跳转到新页面
                                 [UIView animateWithDuration:1.3 animations:^{
                                     self->showImageView.transform =CGAffineTransformMakeScale(0.7, 0.7);
                                 } completion:^(BOOL finished) {
-
                                     ImageShowViewController *vc = [[ImageShowViewController alloc] init];
                                     vc.image = resultImage;
                                     double delayInSeconds = 2.0;
@@ -162,11 +172,9 @@
                 }
             }
         });
-        /// 释放内存
+        /// 释放内存!!! 重要!!!
         [Utility freeCameraData:cameraData];
-
         }
-
 }
 
 /**
@@ -188,7 +196,7 @@
 {
 
 }
-
+/// 将虹软获取的人脸rect转换成CRRect类型
 - (CGRect)dataFaceRect2ViewFaceRect:(MRECT)faceRect
 {
     CGRect frameFaceRect = {0};
