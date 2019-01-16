@@ -118,7 +118,7 @@
                     if (faceInfo.face3DAngle.rollAngle <= 10 && faceInfo.face3DAngle.rollAngle >= -10 && faceInfo.face3DAngle.yawAngle <= 10 && faceInfo.face3DAngle.yawAngle >= -10 && faceInfo.face3DAngle.pitchAngle <= 10 && faceInfo.face3DAngle.pitchAngle >= -10){
                         if (CGRectContainsRect(CGRectMake(30, 150, (UIScreen.mainScreen.bounds.size.width - 60), (UIScreen.mainScreen.bounds.size.height - 300)), faceRectView.frame)){
                             CMGyroData *newestAccel = self.motionManager.gyroData;
-                            if (newestAccel.rotationRate.x < 0.005 && newestAccel.rotationRate.y < 0.005 && newestAccel.rotationRate.z < 0.005 ){
+                            if (newestAccel.rotationRate.x < 0.0005 && newestAccel.rotationRate.y < 0.0005 && newestAccel.rotationRate.z < 0.0005 ){
                                 self->takePhoto = false;
                                 CIImage *ciImage = [[CIImage alloc] initWithCVPixelBuffer: cameraFrame];
                                 CIContext *context = [[CIContext alloc] init];

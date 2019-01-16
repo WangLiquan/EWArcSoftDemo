@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 500)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:UIScreen.mainScreen.bounds];
     imageView.image = _image;
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:imageView];
