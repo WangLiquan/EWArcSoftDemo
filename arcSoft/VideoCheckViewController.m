@@ -26,7 +26,7 @@
     /// 扫描框ImageView
     UIImageView *scanningImageView;
 }
-/// 获取前摄像头影像
+/// 摄像机控制器
 @property (nonatomic, strong) ASFCameraController* cameraController;
 /// 虹软进行人脸识别分析的工具
 @property (nonatomic, strong) ASFVideoProcessor* videoProcessor;
@@ -134,7 +134,7 @@
                         if (CGRectContainsRect(CGRectMake(30, 150, (UIScreen.mainScreen.bounds.size.width - 60), (UIScreen.mainScreen.bounds.size.height - 300)), faceRectView.frame)){
                             self->scanningImageView.image = [UIImage imageNamed:@"scanning_pink"];
 
-                            /// 判断陀螺仪实时片钻加速度,保证手机在尽量平稳的状态
+                            /// 判断陀螺仪实时加速度,保证手机在尽量平稳的状态
                             CMGyroData *newestAccel = self.motionManager.gyroData;
                             if (newestAccel.rotationRate.x < 0.000005 && newestAccel.rotationRate.y < 0.000005 && newestAccel.rotationRate.z < 0.000005 ){
                                 /// 全部条件满足,则拍照.

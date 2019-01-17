@@ -69,7 +69,6 @@
     if ([videoConnection isVideoOrientationSupported]) {
         [videoConnection setVideoOrientation:videoOrientation];
     }
-    /// 输出像素
     if ([captureSession canSetSessionPreset:AVCaptureSessionPreset1280x720]) {
         [captureSession setSessionPreset:AVCaptureSessionPreset1280x720];
     }
