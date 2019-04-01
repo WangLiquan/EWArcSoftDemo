@@ -1,5 +1,7 @@
 # EWArcSoftDemo-OC
-<h3>OC版本的虹软面部识别ArcFace2.0SDK接入</h3>
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
+OC版本的虹软面部识别ArcFace2.0SDK接入
 
 # 实现功能:
 
